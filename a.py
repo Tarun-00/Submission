@@ -173,18 +173,7 @@ def main():
                 text_chunks = get_text_chunks(text)
                 all_text_chunks = text_chunks
 
-        if user_question and all_text_chunks:
-            chat_histories[chat_nav].append({"role": "user", "content": user_question})
-
-            ai_answer = get_ai_answer(user_question, all_text_chunks)
-            chat_histories[chat_nav].append({"role": "assistant", "content": ai_answer})
-
-            for chat in chat_histories[chat_nav]:
-                if chat["role"] == "user":
-                    chat_container.markdown(f"**User:** {chat['content']}")
-                else:
-                    chat_container.markdown(f"**AI:** {chat['content']}")
-
+       
     elif nav == "About":
         st.write("This is an extremely cool app for comparing invoices using AI!")
 
