@@ -135,18 +135,7 @@ def main():
     # Add a navigation sidebar
     nav = st.sidebar.radio("Navigation", ["Compare Invoices", "About"])
 
-    # Add navigation buttons for chats
-    st.sidebar.markdown("## Chats")
-    chat_nav = st.sidebar.radio("", ["Chat 1", "Chat 2", "Chat 3", "Chat 4", "Chat 5"], index=0, label_visibility="visible")
 
-    # Initialize chat histories
-    chat_histories = {
-        "Chat 1": [],
-        "Chat 2": [],
-        "Chat 3": [],
-        "Chat 4": [],
-        "Chat 5": []
-    }
 
     if nav == "Compare Invoices":
         st.title("Compare Invoices")
